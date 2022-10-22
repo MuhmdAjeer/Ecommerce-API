@@ -1,10 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const {register} = require('../controller/authController')
+const {register, verifyOtp} = require('../controller/authController')
 
-router.post('/',register)
-router.get('/',(req,res)=>{
-    console.log('dsf');
-})
+router.post('/register',register)
+router.post('/verifyOtp',verifyOtp)
 
 module.exports = router;
